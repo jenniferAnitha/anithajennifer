@@ -14,10 +14,10 @@ void loop()
   Serial.println(digitalRead(6));
   if(digitalRead(6)== 0)
   {
-   digitalWrite(12, HIGH);
+   digitalWrite(12,LOW);
   }
   else
   {
-    digitalWrite(12, LOW); 
+    digitalWrite(12,HIGH); 
   }
 }
