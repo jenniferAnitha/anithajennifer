@@ -12,12 +12,12 @@ void loop()
 {
   Serial.print("IR Sensor Input ");
   Serial.println(digitalRead(6));
-  if(digitalRead(6)== 0)
+  if(digitalRead(6)== 1)
   {
-   digitalWrite(12,LOW);
+   digitalWrite(12,HIGH);
   }
   else
   {
-    digitalWrite(12,HIGH); 
+    digitalWrite(12,LOW); 
   }
 }
