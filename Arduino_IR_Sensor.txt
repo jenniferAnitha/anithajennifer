@@ -1,20 +1,23 @@
-void setup() {
-  pinMode(7,INPUT);
+void setup()
+{
+//Pin 6 as Input
+  pinMode(6,INPUT);
+  //Initiate Serial Communication
   Serial.begin(9600);
-  pinMode(13,OUTPUT);
+// Pin 12 as Out put
+  pinMode(12, OUTPUT);
 }
 
-void loop() {
-  
-Serial.print("IRSensorip  ");
-Serial.println(digitalRead(7));
-
-if(digitalRead(7)==0)
+void loop()
 {
-  digitalWrite(13,HIGH);
+  Serial.print("IR Sensor Input ");
+  Serial.println(digitalRead(6));
+  if(digitalRead(6)== 0)
+  {
+   digitalWrite(12, HIGH);
   }
- else{
-    digitalWrite(13,LOW);
-    }
-
+  else
+  {
+    digitalWrite(12, LOW); 
+  }
 }
