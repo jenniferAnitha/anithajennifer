@@ -1,8 +1,12 @@
-#define trigPin 13 //pin 13 as Trig pin
+/*#define trigPin 13 //pin 13 as Trig pin
 
 #define echoPin 12 //pin 12 as echo pin
 
-#define led 11 //pin 11 as Led output
+#define led 11 //pin 11 as Led output*/
+// defines pins number
+const int trigPin=13;
+const int echoPin=12;
+const int led=11;
 
 void setup()
 
@@ -36,7 +40,7 @@ digitalWrite(trigPin, LOW);
 
 duration = pulseIn(echoPin, HIGH);
 //calculate the distance
-distance = duration*0.034/2;
+distance = duration * 0.034/2;
 
 if (distance <= 10)
 
